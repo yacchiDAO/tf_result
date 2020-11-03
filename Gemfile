@@ -42,16 +42,15 @@ gem 'sidekiq-scheduler'
 gem 'unicorn'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'bullet'
+  gem 'pry', '>= 0.10.4'
   gem 'pry-rails', '~> 0.3.4'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
-  gem 'pry-doc', '~> 0.8.0'    # methodを表示
-  gem 'pry-byebug', '~> 3.3.0' # デバッグを実施(Ruby 2.0以降で動作する)
-  gem 'pry-stack_explorer', '~> 0.4.9.2' # スタックをたどれる
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'pry-byebug', '~> 3.9.0' # デバッグを実施(Ruby 2.0以降で動作する)
+  gem 'rspec-rails', '~> 3.x'
 end
 
 group :development do
