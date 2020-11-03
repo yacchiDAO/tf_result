@@ -1,0 +1,10 @@
+:verbose: false
+:pidfile: ./tmp/pids/sidekiq.pid
+:logfile: ./log/sidekiq.log
+:concurrency: 10
+:queues:
+  - default
+  - test
+# :schedule:
+#   RegularTweetWorker:
+#    cron: '0 */30 * * * *' # execute at every 30 minutes
