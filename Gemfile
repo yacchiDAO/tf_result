@@ -1,76 +1,79 @@
-source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+source "https://rubygems.org"
+git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.0'
+ruby "2.7.0"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 6.0.3'
+gem "rails", "~> 6.0.3"
 # Use postgresql as the database for Active Record
-gem 'pg', '>= 0.18', '< 2.0'
+gem "pg", ">= 0.18", "< 2.0"
 # Use Puma as the app server
-gem 'puma', '~> 3.12'
+gem "puma", "~> 3.12"
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 6.0'
+gem "sass-rails", "~> 6.0"
 # Use Uglifier as compressor for JavaScript assets
-gem 'uglifier', '>= 1.3.0'
+gem "uglifier", ">= 1.3.0"
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'mini_racer', platforms: :ruby
 
 # Use Redis adapter to run Action Cable in production
-gem 'redis', '~> 4.0'
-gem 'redis-rails'
-gem 'redis-namespace'
+gem "redis", "~> 4.0"
+gem "redis-namespace"
+gem "redis-rails"
 # Use ActiveModel has_secure_password
 
-gem 'active_model_serializers', '~> 0.10.0'
-gem 'activerecord-import'
-gem 'global'
+gem "active_model_serializers", "~> 0.10.0"
+gem "activerecord-import"
+gem "global"
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'ridgepole'
-gem 'config'
-gem 'slim-rails'
-gem 'kaminari'
-gem 'cocoon'
-gem 'rack-user_agent'
-gem 'sidekiq'
-gem 'sidekiq-scheduler'
-gem 'unicorn'
+gem "cocoon"
+gem "config"
+gem "kaminari"
+gem "rack-user_agent"
+gem "ridgepole"
+gem "sidekiq"
+gem "sidekiq-scheduler"
+gem "slim-rails"
+gem "unicorn"
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', require: false
+gem "bootsnap", require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'bullet'
-  gem 'pry', '>= 0.10.4'
-  gem 'pry-rails', '~> 0.3.4'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
-  gem 'pry-byebug', '~> 3.9.0' # デバッグを実施(Ruby 2.0以降で動作する)
-  gem 'rspec-rails', '~> 3.x'
-  gem 'spring-commands-rspec'
+  gem "bullet"
   gem "factory_bot_rails"
+  gem "pry", ">= 0.10.4"
+  gem "pry-byebug", "~> 3.9.0" # デバッグを実施(Ruby 2.0以降で動作する)
+  gem "pry-rails", "~> 0.3.4"  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
+  gem "rspec-rails", "~> 3.x"
+  gem "spring-commands-rspec"
 end
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-  gem 'listen', '>= 3.0.5', '< 3.2'
+  gem "listen", ">= 3.0.5", "< 3.2"
+  gem "web-console", ">= 3.3.0"
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
-  gem 'rubocop'
+  gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec"
+  gem "spring"
 end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '>= 2.15'
-  gem 'selenium-webdriver'
+  gem "capybara", ">= 2.15"
+  gem "selenium-webdriver"
   # Easy installation and use of chromedriver to run system tests with Chrome
-  gem 'chromedriver-helper'
+  gem "chromedriver-helper"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
