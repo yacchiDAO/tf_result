@@ -51,6 +51,8 @@ group :development, :test do
   gem 'pry-rails', '~> 0.3.4'  # rails console(もしくは、rails c)でirbの代わりにpryを使われる
   gem 'pry-byebug', '~> 3.9.0' # デバッグを実施(Ruby 2.0以降で動作する)
   gem 'rspec-rails', '~> 3.x'
+  gem 'spring-commands-rspec'
+  gem "factory_bot_rails"
 end
 
 group :development do
