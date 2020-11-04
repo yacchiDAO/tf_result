@@ -40,6 +40,7 @@ gem "sidekiq"
 gem "sidekiq-scheduler"
 gem "slim-rails"
 gem "unicorn"
+gem 'webpacker'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
